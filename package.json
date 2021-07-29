@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/LordKa0S/typescript-webpack-starter#readme",
   "dependencies": {
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21"
   }
 }
