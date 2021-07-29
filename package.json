@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/LordKa0S/typescript-webpack-starter/issues"
   },
-  "homepage": "https://github.com/LordKa0S/typescript-webpack-starter#readme"
+  "homepage": "https://github.com/LordKa0S/typescript-webpack-starter#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
