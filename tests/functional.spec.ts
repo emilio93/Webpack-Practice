@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
 import * as path from "path";
 
-const sleep : Promise = async (ms) => {
-  return new Promise((resolve) => setTimeout(() => resolve(), ms));
+const sleep : Promise<void> = async (ms : number) => {
+  return new Promise<void>((resolve) => setTimeout(() => resolve(), ms));
 };
 
 const URL = `file:///${path.dirname(__dirname)}/docs/index.html`;
