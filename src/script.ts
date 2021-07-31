@@ -1,10 +1,10 @@
-import $ from "jquery";
+import * as $ from "jquery";
 
 $( document ).ready(function() {
     const loginButton = $('#login-button');
     const logoutButton = $('#logout-button');
 
-    const addInvalidFeedback = (formElement, message) => {
+    const addInvalidFeedback = (formElement : JQuery, message : string) => {
         formElement.addClass('is-invalid');
         if (!$(`#${formElement.attr('id')}-invalid-feedback`).length) {
             jQuery('<div/>', {
@@ -15,24 +15,24 @@ $( document ).ready(function() {
         }
     };
 
-    const removeInvalidFeedback = (formElement) => {
+    const removeInvalidFeedback = (formElement : JQuery) => {
         formElement.removeClass('is-invalid');
         $(`#${formElement.attr('id')}-invalid-feedback`).remove();
     };
 
     loginButton.on('click', function (e) {
         e.preventDefault();
-        const email = $('#email');
-        const password = $('#password');
-        let stop = false;
-        if (email.val().trim() === '') {
+        const email : JQuery = $('#email');
+        const password : JQuery = $('#password');
+        let stop : boolean= false;
+        if ((<string>email.val()).trim() === '') {
             addInvalidFeedback(email, "Please enter an email");
             stop = true;
         } else {
             removeInvalidFeedback(email)
         }
 
-        if (password.val().trim() === '') {
+        if ((<string>password.val()).trim() === '') {
             addInvalidFeedback(password, "Please enter a password");
             stop = true;
         } else {
@@ -50,7 +50,7 @@ $( document ).ready(function() {
 
     });
 
-    logoutButton.on('click', function (e) {
+    logoutButton.on('click', () => {
         $('#welcome-panel').fadeOut('fast', ()=>{
             $('#login-panel').fadeIn('fast');
         });
