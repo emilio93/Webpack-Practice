@@ -7,7 +7,7 @@ $( document ).ready(function() {
     const addInvalidFeedback = (formElement : JQuery, message : string) => {
         formElement.addClass('is-invalid');
         if (!$(`#${formElement.attr('id')}-invalid-feedback`).length) {
-            jQuery('<div/>', {
+            $('<div/>', {
                 "id": `${formElement.attr('id')}-invalid-feedback`,
                 "class": 'invalid-feedback',
                 "html": message
