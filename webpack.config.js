@@ -4,14 +4,13 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   devServer: {
-    contentBase: './dist',
+    contentBase: './docs',
     hot: true,
   },
   devtool: 'inline-source-map',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true
+    path: path.resolve(__dirname, 'docs')
   },
   module: {
     rules: [
