@@ -4,7 +4,11 @@
   "description": "",
   "private": true,
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
     "@playwright/test": "^1.13.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
     "husky": "^7.0.0",
     "playwright": "^1.13.1",
