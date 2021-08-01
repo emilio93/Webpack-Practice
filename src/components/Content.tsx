@@ -1,5 +1,6 @@
 import * as React from "react";
 import Login from "./Login";
+import UserApp from "./UserApp";
 
 
 const ContentComponent = () => {
@@ -20,17 +21,7 @@ const ContentComponent = () => {
       </div>
 
       <Login />
-
-      <div className="col-md-7" id="welcome-panel" style={{display: 'none'}}>
-        <h2>Welcome</h2>
-        <p>You have logged in</p>
-        <div className="mb-3 d-grid gap-2">
-            <button
-              className="btn btn-danger btn-lg"
-              id="logout-button"
-            >Logout</button>
-          </div>
-      </div>
+      <UserApp />
     </div>
   </div>
   );
