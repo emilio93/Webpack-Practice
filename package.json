@@ -25,7 +25,7 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack",
-    "prepare": "husky install"
+    "prepare": "husky install && cp -a .husky/. .git/hooks/"
   },
   "repository": {
     "type": "git",
