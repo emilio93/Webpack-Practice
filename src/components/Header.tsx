@@ -2,7 +2,7 @@ import * as React from "react";
 
 const logoStyle = {
   maxHeight: 64,
-  marginRight: 5
+  marginRight: 5,
 };
 const HeaderComponent = () => {
   return (

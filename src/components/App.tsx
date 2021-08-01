@@ -6,7 +6,7 @@ import Header from "./Header";
 const AppComponent = () => {
   return (
     <div className="container">
-      <Header />
+         <Header />
       <Content />
       <GHCorner />
     </div>

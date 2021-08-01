@@ -2,17 +2,17 @@ import * as React from "react";
 import { FormEvent, useState } from "react";
 
 const UserAppComponent = () => {
-  const [history, setHistory] = useState<string[] | undefined>(['']);
+  const [history, setHistory] = useState<string[] | undefined>([""]);
   const [hasStarted, setHasStarted] = useState<boolean>(false);
 
-  const handleChange = (event : FormEvent<HTMLInputElement>) => {
+  const handleChange = (event: FormEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value;
-    setHistory(prevHistory => {
+    setHistory((prevHistory) => {
       if (!hasStarted) {
         setHasStarted(true);
         return [newValue];
       }
-      return [newValue, ...prevHistory]
+      return [newValue, ...prevHistory];
     });
   };
 
@@ -25,20 +25,16 @@ const UserAppComponent = () => {
           Logout
         </button>
         <input
-          type='text'
+          type="text"
           className="form-control"
           placeholder="Type text here"
           value={history[0]}
           onChange={handleChange}
         />
         <ul className="list-unstyled">
-          {
-            hasStarted
-              ? history.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))
-              : null
-          }
+          {hasStarted
+            ? history.map((item, index) => <li key={index}>{item}</li>)
+            : null}
         </ul>
       </div>
     </div>
